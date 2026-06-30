@@ -3,7 +3,7 @@ name: Deploy Admin to Vercel
 on:
   push:
     branches:
-      - production
+      - main
 
 jobs:
   deploy:
