@@ -1,0 +1,503 @@
+/* Design System and Premium SaaS Styling matching the screenshot */
+:root {
+  --saas-bg: #F8F9FB;
+  --saas-card-bg: #ffffff;
+  --saas-sidebar-bg: #ffffff;
+  --saas-navbar-bg: #ffffff;
+  --saas-text-primary: #111827;
+  --saas-text-secondary: #4B5563;
+  --saas-border: #E5E7EB;
+  --saas-accent: #111111;
+  --saas-success: #10B981;
+  --font-inter: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* Global App Container Overrides */
+body, h1, h2, h3, h4, h5, h6, input, select, textarea, button, span, table, th, td, div, a {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+}
+
+body {
+  background-color: var(--saas-bg) !important;
+  color: var(--saas-text-primary) !important;
+}
+
+.page-content {
+  background-color: var(--saas-bg) !important;
+  min-height: 100vh;
+  padding-top: 90px !important;
+  padding-bottom: 60px !important;
+}
+
+.main-content {
+  background-color: var(--saas-bg) !important;
+}
+
+/* Topbar Header overrides */
+#page-topbar {
+  background-color: var(--saas-navbar-bg) !important;
+  border-bottom: 1px solid var(--saas-border) !important;
+  box-shadow: none !important;
+  height: 64px !important;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 250px;
+  z-index: 1001;
+  transition: all 0.2s ease;
+  padding: 0 24px 0 0px !important;
+}
+
+html[data-sidebar-size="sm"] #page-topbar {
+  left: 70px !important;
+}
+
+/* Breadcrumb Styling */
+.breadcrumb {
+  margin-bottom: 0 !important;
+  padding: 0 !important;
+}
+.breadcrumb-item a {
+  color: var(--saas-text-secondary) !important;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+}
+.breadcrumb-item.active {
+  color: var(--saas-text-primary) !important;
+  font-size: 14px;
+  font-weight: 600;
+}
+.breadcrumb-item + .breadcrumb-item::before {
+  content: ">" !important;
+  color: #9CA3AF !important;
+  padding-right: 8px;
+}
+
+/* Redesigned Premium Cards */
+.saas-card {
+  background-color: var(--saas-card-bg) !important;
+  border: 1px solid var(--saas-border) !important;
+  border-radius: 12px !important;
+  box-shadow: none !important;
+  margin-bottom: 24px;
+  overflow: hidden;
+}
+
+/* Card Header */
+.saas-card-header {
+  padding: 20px 24px !important;
+  background-color: var(--saas-card-bg) !important;
+  border-bottom: none !important;
+}
+
+/* Card Body */
+.saas-card-body {
+  padding: 0 24px 24px 24px !important;
+}
+
+/* Premium Headers */
+.saas-page-title {
+  font-family: var(--font-inter);
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  color: var(--saas-text-primary);
+  margin-bottom: 6px;
+}
+
+.saas-page-desc {
+  font-size: 14px;
+  color: var(--saas-text-secondary);
+  margin-bottom: 0;
+}
+
+/* Form Controls & Inputs */
+.saas-input-group {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.saas-input {
+  background-color: #ffffff !important;
+  border: 1px solid var(--saas-border) !important;
+  border-radius: 8px !important;
+  color: var(--saas-text-primary) !important;
+  font-size: 14px !important;
+  height: 38px !important;
+  padding: 8px 12px !important;
+  transition: all 0.15s ease-in-out !important;
+}
+
+.saas-input:focus {
+  border-color: var(--saas-accent) !important;
+  box-shadow: 0 0 0 2px rgba(17, 24, 39, 0.05) !important;
+  outline: none !important;
+}
+
+.saas-input-icon {
+  position: absolute;
+  left: 12px;
+  color: #9CA3AF;
+  pointer-events: none;
+  font-size: 16px;
+}
+
+.saas-input-with-icon {
+  padding-left: 36px !important;
+}
+
+/* Buttons */
+.saas-btn-primary {
+  background-color: var(--saas-accent) !important;
+  border: 1px solid var(--saas-accent) !important;
+  color: #ffffff !important;
+  font-family: var(--font-inter);
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  border-radius: 8px !important;
+  padding: 8px 16px !important;
+  height: 38px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: all 0.15s ease !important;
+}
+
+.saas-btn-primary:hover {
+  background-color: #222222 !important;
+  border-color: #222222 !important;
+}
+
+.saas-btn-secondary {
+  background-color: #ffffff !important;
+  border: 1px solid var(--saas-border) !important;
+  color: var(--saas-text-primary) !important;
+  font-family: var(--font-inter);
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  border-radius: 8px !important;
+  padding: 8px 12px !important;
+  height: 38px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.15s ease !important;
+}
+
+.saas-btn-secondary:hover {
+  background-color: #F9FAFB !important;
+  border-color: #D1D5DB !important;
+}
+
+.saas-btn-ghost {
+  background-color: transparent !important;
+  border: 1px solid var(--saas-border) !important;
+  color: var(--saas-text-primary) !important;
+  font-size: 14px !important;
+  border-radius: 8px !important;
+  width: 38px;
+  height: 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.15s ease !important;
+}
+
+.saas-btn-ghost:hover {
+  background-color: #F3F4F6 !important;
+  border-color: #C1C5CB !important;
+}
+
+/* Premium Custom Table */
+.saas-table-container {
+  border-radius: 8px;
+  overflow-x: auto;
+  border: 1px solid var(--saas-border);
+  background-color: #ffffff;
+  width: 100%;
+}
+
+.saas-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.saas-table th {
+  background-color: #FAFBFC;
+  border-bottom: 1px solid var(--saas-border);
+  color: var(--saas-text-primary);
+  font-family: var(--font-inter);
+  font-size: 14px;
+  font-weight: 600;
+  padding: 8px 16px;
+}
+
+.saas-table td {
+  padding: 10px 16px;
+  border-bottom: 1px solid #F3F4F6;
+  color: var(--saas-text-primary);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.saas-table tbody tr {
+  transition: background-color 0.15s ease;
+}
+
+.saas-table tbody tr:hover {
+  background-color: #F9FAFB;
+}
+
+.saas-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Sorting indicators */
+.sort-indicator {
+  display: inline-flex;
+  align-items: center;
+  margin-left: 6px;
+  color: var(--saas-text-secondary);
+  opacity: 0.4;
+  font-size: 12px;
+}
+
+.sort-indicator.active {
+  opacity: 1;
+  color: var(--saas-accent);
+}
+
+/* Green Status Dot Badge */
+.saas-status-dot-active {
+  display: inline-flex;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--saas-text-primary);
+}
+
+.saas-status-dot-active::before {
+  content: "";
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: var(--saas-success);
+  margin-right: 8px;
+}
+
+.saas-status-dot-inactive {
+  display: inline-flex;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--saas-text-secondary);
+}
+
+.saas-status-dot-inactive::before {
+  content: "";
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #9CA3AF;
+  margin-right: 8px;
+}
+
+/* Dropdown Action Menu (Three-dot) */
+.saas-action-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.saas-dropdown-menu {
+  position: absolute;
+  right: 0;
+  top: 100%;
+  margin-top: 4px;
+  background-color: #ffffff;
+  border: 1px solid var(--saas-border);
+  border-radius: 8px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.02);
+  z-index: 100;
+  min-width: 140px;
+  padding: 4px;
+}
+
+.saas-dropdown-item {
+  width: 100%;
+  padding: 8px 12px;
+  font-size: 13px;
+  color: var(--saas-text-primary);
+  background: none;
+  border: none;
+  border-radius: 6px;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.saas-dropdown-item:hover {
+  background-color: #F3F4F6;
+}
+
+.saas-dropdown-item.danger {
+  color: var(--saas-error);
+}
+
+.saas-dropdown-item.danger:hover {
+  background-color: #FEF2F2;
+}
+
+/* Pagination */
+.saas-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 18px;
+  background-color: #ffffff;
+  border-top: 1px solid var(--saas-border);
+}
+
+/* Sidebar Light Overrides from your screenshot */
+.app-menu.navbar-menu.minimal-sidebar {
+  background-color: var(--saas-sidebar-bg) !important;
+  border-right: 1px solid var(--saas-border) !important;
+}
+
+.app-menu.navbar-menu.minimal-sidebar .navbar-brand-box {
+  background-color: var(--saas-sidebar-bg) !important;
+  border-bottom: 1px solid var(--saas-border) !important;
+}
+
+.app-menu.navbar-menu.minimal-sidebar .navbar-nav .nav-link {
+  color: var(--saas-text-secondary) !important;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.app-menu.navbar-menu.minimal-sidebar .navbar-nav .nav-link:hover {
+  color: var(--saas-text-primary) !important;
+  background-color: #F3F4F6 !important;
+}
+
+.app-menu.navbar-menu.minimal-sidebar .navbar-nav .nav-link.active {
+  color: var(--saas-text-primary) !important;
+  background-color: #F3F4F6 !important;
+  font-weight: 600;
+  border-left: none !important;
+  border-radius: 8px !important;
+}
+
+#topnav-hamburger-icon,
+#topnav-hamburger-icon:focus,
+#topnav-hamburger-icon:active,
+#topnav-hamburger-icon:hover {
+  outline: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  background: transparent !important;
+}
+
+/* Custom Hamburger transition: horizontal bars to "X" shape */
+.hamburger-icon {
+  width: 20px !important;
+  height: 14px !important;
+  position: relative;
+  display: inline-block;
+  transform: rotate(0deg) !important;
+  transition: .3s ease-in-out;
+}
+
+.hamburger-icon span {
+  display: block;
+  position: absolute;
+  height: 2px !important;
+  width: 100% !important;
+  background-color: #111827 !important; /* solid dark gray/black */
+  border-radius: 2px;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transform-origin: center;
+  transition: .25s ease-in-out;
+}
+
+/* Default state offsets */
+.hamburger-icon span:nth-child(1) {
+  top: 0px !important;
+}
+
+.hamburger-icon span:nth-child(2) {
+  top: 6px !important;
+  width: 100% !important; /* uniform horizontal lines */
+}
+
+.hamburger-icon span:nth-child(3) {
+  top: 12px !important;
+}
+
+/* Animated "X" state when open */
+.hamburger-icon.open {
+  transform: rotate(0deg) !important; /* keep rot at 0 */
+}
+
+.hamburger-icon.open span:nth-child(1) {
+  top: 6px !important;
+  left: 0px !important;
+  width: 100% !important;
+  transform: rotate(45deg) !important;
+}
+
+.hamburger-icon.open span:nth-child(2) {
+  opacity: 0 !important;
+  width: 0% !important;
+  left: 50% !important;
+  transform: none !important;
+}
+
+.hamburger-icon.open span:nth-child(3) {
+  top: 6px !important;
+  left: 0px !important;
+  width: 100% !important;
+  transform: rotate(-45deg) !important;
+}
+
+/* Mobile view styling fixes */
+@media (max-width: 767.98px) {
+  #page-topbar {
+    left: 0px !important;
+    padding: 0 16px !important;
+  }
+
+  /* Add top padding/margin to prevent overlapping with fixed topbar */
+  .main-content {
+    margin-top: 0px !important;
+    padding-top: 0px !important;
+    margin-left: 0px !important;
+  }
+
+  .page-content {
+    padding-top: 76px !important; /* exactly matches the header + tiny spacer */
+  }
+
+  /* Center the hamburger vertical alignment in mobile header bar */
+  #topnav-hamburger-icon {
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+    display: flex !important;
+    align-items: center !important;
+    height: 64px !important;
+  }
+}
